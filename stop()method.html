@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery stop() method</title>
+
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightgreen;
+            border: 1px solid #000;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            position: relative;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery stop() method</h1>
+    <div id="box">Yahoo baba</div>
+    <br>
+    <button id="animatebtn">Animate</button>
+
+    <button id="stopbtn">Stop</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#animatebtn").click(function(){
+            $("#box").animate({
+                left:"250px", width: "200px",
+            }, 4000);
+        });
+
+        $("#stopbtn").click(function(){
+            $("#box").stop();
+        })
+    })
+</script>
+    
+</body>
+</html>

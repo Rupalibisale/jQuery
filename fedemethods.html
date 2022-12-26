@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery fadeIn(), fadeOut(), fadeToggle(), fadeTo() methods.</title>
+
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightgreen;
+            border: 1px solid #000;
+            padding: 10px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery fade() method</h1>
+    <div id="box">
+        <h2>text box</h2>
+        <p>Lorem ipsum<span>doller sit amet</span>Rupali Rahul Bisale here from Maharashtra</p>
+    </div>
+    <br>
+    <button id="fadeinbtn">fadeIn</button>
+    <button id="fadeoutbtn">fadeOut</button>
+    <button id="fadetogglebtn">fadeToggle</button>
+    <button id="fadeTobtn">fadeTo</button>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fadeinbtn").click(function(){
+                $("#box").fadeIn();
+            });
+
+            $("#fadeoutbtn").click(function(){
+                $("#box").fadeOut();
+            });
+
+            $("#fadetogglebtn").click(function(){
+                $("#box").fadeToggle();
+            });
+
+            $("#fadetobtn").click(function(){
+                $("#box").fadeTo(3000, 0.7, function(){
+                    console,log("It is fadeTo");
+                });
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

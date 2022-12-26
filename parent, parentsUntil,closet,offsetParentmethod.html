@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Parent, parentUntill, closest, offsetParent method</title>
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #main-outer{
+            background:rgb(131, 131, 242);
+            border: 1px solid #000;
+            padding: 10px;
+            height: 150px;
+            width: 150px;
+            
+        }
+        #outer{
+            background:rgb(246, 185, 71);
+            border: 1px solid #000;
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+        }
+        #inner{
+            background:rgb(210, 101, 119);
+            border: 1px solid #000;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery Anchaster Method</h1>
+    <div id="main-outer">
+    
+        <h2>Main outer</h2>
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2 id="child-head">Inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-C">C</div>
+            <div>D</div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#child-C").parent().css("background", "red");
+
+            //parents()
+           // $("#child-C").parents().css("background", "red");
+           //$("#child-C").parents("#inner").css("background", "red");
+
+           //parentsUntil
+           // $("#child-C").parentsUntil("#inner").css("background", "red"); // child-c to inner applying
+           //$("#inner").parentsUntil("#main-outer").css("background", "red");
+
+           //offsetParent
+           // $("#child-C").offsetParent().css("background", "red"); 
+
+          //closest
+           // $("#child-C").closest(div).css("background", "red"); 
+
+
+        })
+    </script>
+    
+</body>
+</html>

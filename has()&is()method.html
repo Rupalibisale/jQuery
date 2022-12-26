@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery has() and is() method</title>
+
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #first{
+            background: lightgreen;
+            border: 1px solid #000;
+            padding: 10px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery has() & is() methods</h1>
+    <div id="first">
+        <p>Lorem ipsum <b>maharashtra</b>rupali rahul bisale</p>
+        <p>Lorem ipsum rupali rahul bisale</p>
+    
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+</ul>
+
+    <p class="test">Lorem ipsum rupali rahul bisale maharashtra</p>
+    <p>Lorem ipsum <span class="test">maharshtra solapur</span>rupali rahul bisale maharashtra</p>
+
+
+<script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        //$("p").has("span").css("background", "red");
+
+        if($("p").parent().is("div")){
+            console.log($("p").parent().is("div"));
+        }
+    })
+</script>
+    
+</body>
+</html>

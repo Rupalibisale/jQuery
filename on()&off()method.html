@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery on() and off() method</title>
+    <style>
+        body{
+            font-family:arial;
+        }
+        #box{
+            
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .boxbg{
+            background-color:pink;
+        }
+        </style>
+</head>
+<body>
+    <h1>jQuery on() method</h1>
+    <div id="box">
+        <h2>text box</h2>
+        <p>Lorem ipsum<span>doller sit amet</span>Rupali Rahul Bisale here from Maharashtra</p>
+
+    </div><br><br>
+    <button>Remove button</button>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // $("#box").on("click",function(){
+            //     $(this).css("background", "orange");
+            // });
+
+
+            // $("#box").on("mouseover mouseout",function(){
+            //     $(this).toggleClass("boxbg", "pink");
+            // });
+
+
+            //method second for multiple events
+
+         $("#box").on({
+            "click":function(){
+              $(this).css("background","Blue");
+            },
+
+            "mouseover":function(){
+                $(this).css("background", "pink");
+            },
+
+            "mouseout":function(){
+                $(this).css("background","lightgreen")
+            },
+         });
+
+         // for off()
+        //  $("button").click(function(){
+        //     $("#box").off("mouseover mouseout");
+        //  });
+
+        });
+    </script>
+</body>
+</html>

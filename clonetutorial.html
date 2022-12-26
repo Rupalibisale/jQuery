@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery clone tutorial</title>
+
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightgreen;
+            border: 1px solid #000;
+            padding: 10px;
+
+        }
+        #box2{
+            background: rgb(238, 144, 214);
+            border: 1px solid #000;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<br>
+
+    <h1>jQuery clone() method</h1>
+    <div id="box">
+        <h2>text box</h2>
+        <p>Lorem ipsum<span>doller sit amet</span>Rupali Rahul Bisale here from Maharashtra</p>
+
+    </div>
+    <br></br>
+    <div id="box2">
+        <p>Thid is another div</p>
+        </div>
+    <br>
+    </br>
+    <button id="clonebtn">CloneBtn</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#clonebtn").click(function(){
+                $("#box h2").clone().prependTo("#box2");
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery filtering methods</title>
+
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #first{
+            background: lightgreen;
+            border: 1px solid #000;
+            padding: 10px;
+
+        }
+        #second{
+            background: rgb(124, 124, 244);
+            border: 1px solid #000;
+            padding: 10px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery filtering() methods</h1>
+    <div id="first">
+        <p>Lorem ipsum rupali rahul bisale</p>
+        <p>Lorem ipsum rupali rahul bisale</p>
+    
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+</ul>
+<div id="second">
+    <p class="test">Lorem ipsum rupali rahul bisale maharashtra</p>
+    <p>Lorem ipsum rupali rahul bisale maharashtra</p>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        //first()
+        // $("p").first().css("background", "gold");
+        //last()
+        //$("p").last().css("background", "gold");
+
+        //eq() its need to give parameter
+        //$("ul li").eq(2).css("background", "gold");
+
+       // filter()
+      // $("p").filter(".test").css("background", "gold");
+
+       //not()
+       //$("p").not(".test").css("background", "gold");
+
+       //slice()
+       $("ul li").slice(2).css("background", "gold");
+
+    })
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get method jQuery....val() get and val() set  method</title>
+</head>
+<body>
+    <h1>Get Method val().</h1>
+    <action action="" id="sform">
+        <lable for="">Name</lable><input type="email" id="sname"><br><br>
+        <lable for="">Class</lable><input type="text" id="sclass"><br><br>
+        <lable for="">Country</lable>
+        <select id="scountry">
+        <option value="india">India</option>
+        <option value="pakistan">Pakisthan</option>
+        <option value="germany">GErmany</option>
+        <option value="bangladesh">Bangladesh</option>
+    </select>
+    <br><br>
+    <input type="submit">
+    </action>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //for get method [val()]
+            $("#sname").submit(function(){
+                var name = $("#sname").val();
+                var classname = $("#classname").val();
+                var country = $("#scountry").val();
+
+                alert("Hello: "+ name+"class: "+country+"country:"+country);
+            });
+
+
+
+            // for Set method [val()]
+
+            // $("#sname").val("Rupali");
+            // $("#sclass").val("ABCD");
+        
+
+
+        });
+    </script>
+
+    
+</body>
+</html>

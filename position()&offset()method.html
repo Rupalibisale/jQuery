@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery position() and offset() method</title>
+    <style>
+        body{
+            font-family:arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightgreen;
+            border: 1px solid #000;
+            padding: 10px;
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery position() and Offset() method</h1>
+    <div id="box">
+        <h2>text box</h2>
+        <p>Lorem ipsum<span>doller sit amet</span>Rupali Rahul Bisale here from Maharashtra</p>
+    </div>
+    <br>
+    <button id="positionbtn">Position</button>
+    <button id="offsetbtn">Offset</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#positionbtn").click(function(){
+                console.log($("#box").position());
+            });
+
+            $("#offsetbtn").click(function(){
+                console.log($("#box").offset());
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

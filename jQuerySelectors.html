@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors </title>
+    <style>
+        body{
+            font-family:arial;
+        }
+        #box{
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yahoo BAba</h1>
+    <div id="box" class="test">
+        <h1>test box 1</h1>
+        <p>rupali bisale here from maharashtra india</p>
+    </div>
+
+    <ul id="list">
+        <li>orange</li>
+        <li class="test">BAnana</li>
+        <li>Grapes</li>
+        <li class="test">Apple</li> 
+        <li>Guava</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $("#list li").css("color","red").css("border","2px blue solid");
+             //$("#list").css("border","2px blue solid");
+             //$("ul li:eq(second)").css("border","2px pink solid");
+             //$("ul li:gt(2)").css("border", "2px blue solid");
+             //$("ul li:lt(2)").css("border","2px pink solid");
+
+        });
+    </script>
+
+    
+    
+</body>
+</html>
